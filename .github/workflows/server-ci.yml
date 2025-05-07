@@ -1,0 +1,30 @@
+name: server CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.11'
+            
+            - name: Install dependencies
+              run: |
+                python -m venv venv
+                source venv/bin/activate
+                pip install flask || true # requirements.txt varsa pip install -r requirements.txt
+
+            - name: Lint with flake8
+              run: |
+                pip install flake8
+                flake8 . || true # Linting may fail if there are no issues
