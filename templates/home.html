@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hava Durumu</title>
+</head>
+<body>
+    <h1>Şehir Bazlı Hava Durumu</h1>
+    <table border="1">
+        <tr>
+            <th>Şehir</th>
+            <th>Sıcaklık</th>
+        </tr>
+        {% for city, temp in weather_data.items() %}
+        <tr>
+            <td>{{ city }}</td>
+            <td>{{ temp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
