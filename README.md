@@ -22,7 +22,9 @@ This is the **server** component of the Weather Publisher & Server project. The 
    source venv/bin/activate
 
    ---
-   🛠️ Technologies Used
+   
+🛠️ Technologies Used
+
 Python 3.11+
 
 Flask web framework
