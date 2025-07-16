@@ -13,20 +13,25 @@ This is the **server** component of the Weather Publisher & Server project. The 
 
 ---
 
-## 🚀 How to Run
+🛠️ Automation & Containerization
 
-1. Make sure you have Python 3.11+ installed.
-2. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+**-GitHub Actions is set up to:**
 
-   ---
-   
-🛠️ Technologies Used
+Automatically run tests and lint checks on pushes and pull requests to the master branch.
 
-Python 3.11+
+Create and test a Python virtual environment.
 
-Flask web framework
+Ensure code quality with flake8.
 
-HTTP for communication between Publisher and Server
+**Future plans include:**
+
+Building Docker images for both Publisher and Server.
+
+Pushing these images to Docker Hub or another container registry.
+
+Using containers for easier deployment and consistent environments.
+
+Possibly deploying to Kubernetes or cloud container services.
+
+
+
